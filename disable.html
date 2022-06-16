@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+ 
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    </head>
+
+  
+<script>
+      $(document).ready(function() {
+    $("#container").addClass("disable-div");
+});
+
+$(document).ready(function() {
+    $("#container").children().prop('disabled', true);
+});
+
+
+$(document).ready(function() {
+    $("#container :input").prop('disabled', true);
+});
+
+$(document).ready(function() {
+    $('#container *').prop('disabled', true);
+});
+//using javascript
+
+var childNodes = document.getElementById("container").getElementsByTagName('*');
+for (var node of childNodes) {
+    node.disabled = true;
+}
+</script> 
+
+
+
+<body>
+    
+<div id="container">
+    <label>Enter your name: <input type="text"></label>
+    <button id="submit">Submit</button>
+</div>
+
+<div id="container">
+    <label>Enter your name:</label>
+    <input type="text">
+    <button id="submit">Submit</button>
+</div>
+
+<div id="container">
+    <label>Enter your name: <input type="text"></label>
+    <button id="submit">Submit</button>
+</div>
+
+<div id="container">
+    <label>Enter your name:</label>
+    <input type="text">
+    <button id="submit">Submit</button>
+</div>
+
+<div id="container">
+    <label>Enter your name: <input type="text"></label>
+    <button id="submit">Submit</button>
+</div>
+</body>
+<style>
+    
+.disable-div {
+    pointer-events: none;
+}
+</style>
+</html>
