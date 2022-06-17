@@ -15,9 +15,11 @@
             
             //给div添加change事件
             $("#type").change(function() {
-                if($(this).val() !== null ) {
+                if($(this).val() == 1 ) {
                     $("#shouhou1").show();
-  
+                }
+                else if($(this).val() == 2 ) {
+                    $("#shouhou2").show();
                 } 
             })
         })   
@@ -25,7 +27,6 @@
 </script>  
 <body>
     <select class="select" size="1" name="type" id="type">
-        <option style='display:none'></option>
         <option value="1">表格</option>
         <option value="2">折线图</option>
         <option value="3">柱状图</option>    

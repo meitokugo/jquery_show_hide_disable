@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+<!-- 新 Bootstrap5 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+ 
+<!--  popper.min.js 用于弹窗、提示、下拉菜单 -->
+<script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+ 
+<!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+<script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/js/tempusdominus-bootstrap-4.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.38.0/css/tempusdominus-bootstrap-4.min.css" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+ <script src="moment.js"></script>
+ 
+</head>
+    <body>
+        <div class="container">
+            <div class="col-md-3 py-4">
+                <form class="card p-4">
+                    <div class="input-group date mb-3" id="datetimepicker3" data-target-input="nearest">
+                        <label for="datetimepicker3" class="pt-2 pr-2">日時：</label>
+                        <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker3"/>
+                        <div class="input-group-text" data-target="#datetimepicker3" data-toggle="datetimepicker">
+                        <i class="far fa-calendar-alt"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+         </div>
+    </body>
+    <footer>
+
+    </footer>
+    <script>
+    $(function() {
+    $('#datetimepicker1').datetimepicker({
+        dayViewHeaderFormat: 'YYYY年 MMMM',
+        tooltips: {
+        close: '閉じる',
+        selectMonth: '月を選択',
+        prevMonth: '前月',
+        nextMonth: '次月',
+        selectYear: '年を選択',
+        prevYear: '前年',
+        nextYear: '次年',
+        selectTime: '時間を選択',
+        selectDate: '日付を選択',
+        prevDecade: '前期間',
+        nextDecade: '次期間',
+        selectDecade: '期間を選択',
+        prevCentury: '前世紀',
+        nextCentury: '次世紀',
+        },
+        format: 'YYYY/MM/DD',
+        locale: 'ja',
+        icons: {
+        time: 'far fa-clock',
+        date: 'far fa-calendar-alt',
+        up: 'fas fa-arrow-up',
+        down: 'fas fa-arrow-down',
+        },
+        buttons: {
+        showClose: true,
+        },
+    });
+
+    $('#datetimepicker2').datetimepicker({
+        tooltips: {
+        close: '閉じる',
+        pickHour: '時間を取得',
+        incrementHour: '時間を増加',
+        decrementHour: '時間を減少',
+        pickMinute: '分を取得',
+        incrementMinute: '分を増加',
+        decrementMinute: '分を減少',
+        pickSecond: '秒を取得',
+        incrementSecond: '秒を増加',
+        decrementSecond: '秒を減少',
+        togglePeriod: '午前/午後切替',
+        selectTime: '時間を選択',
+        },
+        format: 'HH:mm',
+        locale: 'ja',
+        icons: {
+        time: 'far fa-clock',
+        date: 'far fa-calendar-alt',
+        up: 'fas fa-arrow-up',
+        down: 'fas fa-arrow-down',
+        },
+        buttons: {
+        showClose: true,
+        },
+    });
+    
+        $('#datetimepicker3').datetimepicker({
+        dayViewHeaderFormat: 'YYYY年 MMMM',
+        tooltips: {
+        close: '閉じる',
+        selectMonth: '月を選択',
+        prevMonth: '前月',
+        nextMonth: '次月',
+        selectYear: '年を選択',
+        prevYear: '前年',
+        nextYear: '次年',
+        selectTime: '時間を選択',
+        selectDate: '日付を選択',
+        prevDecade: '前期間',
+        nextDecade: '次期間',
+        selectDecade: '期間を選択',
+        prevCentury: '前世紀',
+        nextCentury: '次世紀',
+        },
+        format: 'YYYY/MM/DD HH:mm',
+        locale: 'ja',
+        icons: {
+        time: 'far fa-clock',
+        date: 'far fa-calendar-alt',
+        up: 'fas fa-arrow-up',
+        down: 'fas fa-arrow-down',
+        },
+        buttons: {
+        showClose: true,
+        },
+    });
+    });
+    </script>
+    <style>
+.datepicker-days th.dow:first-child,
+.datepicker-days td:first-child {
+  color: #f00;
+}
+.datepicker-days th.dow:last-child,
+.datepicker-days td:last-child {
+  color: #00f;
+}
+
+    </style>
+</html>
